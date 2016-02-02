@@ -3,6 +3,7 @@
 import os
 import subprocess
 import sys
+import time
 
 if len(sys.argv) != 3:
         sys.exit("two numbers required")
@@ -28,5 +29,6 @@ for i in range(int(sys.argv[1]), int(sys.argv[2])):
 
                 print ""
                 sys.stdout.flush()
+		time.sleep(10)
 
 sys.exit("done")
