@@ -14,6 +14,7 @@ for i in range(int(sys.argv[1]), int(sys.argv[2])):
             pos2=out.find("</h4>",pos1)
             print i, out[pos1+4:pos2],
 
+            # ex) http://www.museum.go.kr/site/main/relic/download/file/get?relicId=329&imgPathNo=1
             out= subprocess.check_output(["/usr/bin/wget", "--content-disposition",
                                           "http://www.museum.go.kr/site/main/relic/download/file/get?relicId="+str(i)+"&imgpathno=1"],
                                          stderr=subprocess.STDOUT)
